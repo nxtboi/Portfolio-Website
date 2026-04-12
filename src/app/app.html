@@ -1,0 +1,562 @@
+<main class="bg-bg min-h-screen">
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 w-full z-50 border-b border-border bg-bg/80 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 bg-accent rounded-sm flex items-center justify-center font-mono font-bold text-bg">VP</div>
+        <span class="font-mono text-xs tracking-tighter hidden sm:block">VIJAY_PRASAD // CTO_HARIYALIKART</span>
+      </div>
+      <div class="flex gap-6 text-[10px] font-mono uppercase tracking-widest">
+        <a href="#vision" class="hover:text-accent transition-colors">Vision</a>
+        <a href="#expertise" class="hover:text-accent transition-colors">Expertise</a>
+        <a href="#projects" class="hover:text-accent transition-colors">Projects</a>
+        <a href="#timeline" class="hover:text-accent transition-colors">Timeline</a>
+        <a href="#stack" class="hover:text-accent transition-colors">Stack</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section #heroSection class="relative h-screen flex flex-col justify-center section-container pt-32 overflow-hidden">
+    <!-- Parallax Background Elements -->
+    <div class="absolute inset-0 pointer-events-none overflow-hidden">
+      <div class="parallax-bg absolute top-[20%] left-[10%] w-64 h-64 bg-accent/5 rounded-full blur-3xl" data-speed="0.2"></div>
+      <div class="parallax-bg absolute top-[60%] right-[15%] w-96 h-96 bg-blue-500/5 rounded-full blur-3xl" data-speed="0.4"></div>
+      <div class="parallax-bg absolute bottom-[10%] left-[30%] w-48 h-48 bg-purple-500/5 rounded-full blur-3xl" data-speed="0.1"></div>
+      
+      <!-- Floating Icons -->
+      <mat-icon class="parallax-bg absolute top-[15%] right-[20%] text-accent/10 text-6xl" data-speed="0.3">memory</mat-icon>
+      <mat-icon class="parallax-bg absolute top-[45%] left-[5%] text-accent/10 text-8xl" data-speed="0.15">precision_manufacturing</mat-icon>
+      <mat-icon class="parallax-bg absolute bottom-[25%] right-[10%] text-accent/10 text-5xl" data-speed="0.45">security</mat-icon>
+    </div>
+
+    <!-- Liquid Background -->
+    <div class="liquid-container">
+      <div class="liquid-blob w-[400px] h-[400px] top-[-10%] left-[-10%]" style="animation-duration: 25s; animation-delay: 0s;"></div>
+      <div class="liquid-blob w-[300px] h-[300px] top-[40%] left-[60%] bg-blue-500" style="animation-duration: 18s; animation-delay: -5s;"></div>
+      <div class="liquid-blob w-[500px] h-[500px] top-[70%] left-[20%] bg-purple-500" style="animation-duration: 30s; animation-delay: -10s;"></div>
+    </div>
+
+    <div class="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none overflow-hidden">
+      <div class="parallax-bg text-[20vw] font-mono leading-none select-none" data-speed="-0.1">ROBOTICS<br/>CYBER<br/>AI</div>
+    </div>
+
+    <div class="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12">
+      <div class="flex-1">
+        <div class="mono-label hero-reveal mb-4">EST. 2024 // TECHNOLOGY LEADERSHIP</div>
+        <h1 class="text-6xl md:text-8xl font-bold mb-6 hero-reveal leading-[0.9]">
+          BRIDGING<br/>
+          <span class="text-accent glitch-text" data-text="HARDWARE">HARDWARE</span><br/>
+          & SOFTWARE.
+        </h1>
+        <p class="max-w-xl text-muted text-lg hero-reveal mb-8">
+          I am Vijay Prasad, CTO at Hariyalikart. I build resilient technological ecosystems where hardware agility meets software integrity.
+        </p>
+        <div class="flex gap-4 hero-reveal">
+          <button class="px-8 py-3 bg-accent text-bg font-mono text-xs uppercase tracking-widest font-bold hover:bg-white transition-colors">
+            View Projects
+          </button>
+          <a href="#footer" class="px-8 py-3 border border-border font-mono text-xs uppercase tracking-widest hover:bg-white/5 transition-colors text-center">
+            Contact Me
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-reveal relative">
+        <!-- Glow Effect -->
+        <div class="absolute inset-0 bg-accent rounded-full blur-3xl opacity-20 animate-pulse"></div>
+        
+        <!-- Profile Image Container -->
+        <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full border-2 border-accent/30 p-2 backdrop-blur-sm">
+          <div class="w-full h-full rounded-full overflow-hidden border border-accent/50 shadow-[0_0_50px_rgba(0,255,65,0.2)]">
+            <img 
+              src="https://lh3.googleusercontent.com/d/1B315ujaMaqSHjzo-WqCC4Ri5Mp3JCVyC" 
+              alt="Vijay Prasad" 
+              class="w-full h-full object-cover"
+              referrerpolicy="no-referrer"
+            />
+          </div>
+          
+          <!-- Decorative Ring -->
+          <div class="absolute inset-[-10px] border border-accent/10 rounded-full animate-[spin_20s_linear_infinite]"></div>
+          <div class="absolute inset-[-20px] border border-accent/5 rounded-full animate-[spin_30s_linear_infinite_reverse]"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scrollytelling Narrative -->
+  <section id="vision" #scrollyContainer class="relative bg-white/5 py-24 overflow-hidden">
+    <!-- Parallax Background Elements -->
+    <div class="absolute inset-0 pointer-events-none overflow-hidden">
+      <div class="parallax-bg absolute top-[10%] right-[5%] w-72 h-72 bg-accent/5 rounded-full blur-3xl" data-speed="0.3"></div>
+      <div class="parallax-bg absolute bottom-[20%] left-[5%] w-80 h-80 bg-blue-500/5 rounded-full blur-3xl" data-speed="0.5"></div>
+    </div>
+
+    <!-- Liquid Background -->
+    <div class="liquid-container opacity-20">
+      <div class="liquid-blob w-[600px] h-[600px] top-[10%] left-[80%] bg-accent" style="animation-duration: 35s; animation-delay: -2s;"></div>
+      <div class="liquid-blob w-[400px] h-[400px] top-[60%] left-[-20%] bg-blue-400" style="animation-delay: -12s; animation-duration: 40s;"></div>
+    </div>
+
+    <div class="section-container max-w-3xl mx-auto">
+      <div class="space-y-16 py-12">
+        <div class="scrolly-item">
+          <div class="mono-label mb-4">01 // THE MISSION</div>
+          <h2 class="text-4xl font-bold mb-6">Bridging the Gap</h2>
+          <p class="text-muted leading-relaxed">
+            My mission is to bridge the gap between ambitious hardware concepts and production-ready, resilient technological ecosystems. I specialize in transforming early-stage prototypes into robust, scalable products that can withstand the rigors of real-world deployment. By integrating advanced software architectures with agile hardware design, I ensure that every innovation is built on a foundation of reliability and performance.
+          </p>
+        </div>
+
+        <div class="scrolly-item">
+          <div class="mono-label mb-4">02 // THE FOCUS</div>
+          <h2 class="text-4xl font-bold mb-6">Robotics & Drones</h2>
+          <p class="text-muted leading-relaxed">
+            With a deep focus on Robotics, Drones, and Smart Systems, I lead the engineering and security strategy that powers our innovation. My work involves designing complex autonomous systems that can navigate challenging environments with precision. From multi-rotor industrial drones to precision agricultural robots, I focus on creating smart systems that are not only intelligent but also highly efficient and mission-critical.
+          </p>
+        </div>
+
+        <div class="scrolly-item">
+          <div class="mono-label mb-4">03 // THE PHILOSOPHY</div>
+          <h2 class="text-4xl font-bold mb-6">Secure by Design</h2>
+          <p class="text-muted leading-relaxed">
+            I specialize in the intersection of hardware agility and software integrity—ensuring every system is high-performing and secure-by-design. In an era of increasing cyber threats, I believe that security must be baked into the hardware from day one. This includes implementing secure boot chains, encrypted communication protocols, and robust OTA update mechanisms that protect the integrity of the entire ecosystem.
+          </p>
+        </div>
+
+        <div class="scrolly-item">
+          <div class="mono-label mb-4">04 // THE VISION</div>
+          <h2 class="text-4xl font-bold mb-6">Impossible Challenges</h2>
+          <p class="text-muted leading-relaxed">
+            I thrive in environments where "impossible" hardware challenges meet strategic engineering solutions. Whether it's optimizing firmware for ultra-low power consumption or designing resilient communication links for remote operations, I am driven by the pursuit of excellence in the face of technical adversity. My goal is to push the boundaries of what's possible in the hardware-software frontier.
+          </p>
+        </div>
+
+        <div class="scrolly-item">
+          <div class="mono-label mb-4">05 // THE FUTURE</div>
+          <h2 class="text-4xl font-bold mb-6">Resilient Ecosystems</h2>
+          <p class="text-muted leading-relaxed">
+            I am committed to building resilient technological ecosystems that can adapt to the ever-changing landscape of global industry. By fostering a culture of continuous learning and innovation, I aim to lead the development of systems that are not only technologically advanced but also socially responsible and sustainable. The future of technology lies in the seamless integration of hardware, software, and human ingenuity.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Expertise Grid -->
+  <section id="expertise" class="relative section-container overflow-hidden py-16">
+    <!-- Parallax Background Elements -->
+    <div class="absolute inset-0 pointer-events-none overflow-hidden">
+      <div class="parallax-bg absolute top-[30%] left-[-5%] w-96 h-96 bg-accent/5 rounded-full blur-3xl" data-speed="0.25"></div>
+      <div class="parallax-bg absolute bottom-[10%] right-[-5%] w-80 h-80 bg-blue-500/5 rounded-full blur-3xl" data-speed="0.35"></div>
+    </div>
+
+    <div class="text-center mb-12">
+      <div class="mono-label mb-2">TECHNICAL DOMAINS</div>
+      <h2 class="text-4xl font-bold">Core Expertise</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      @for (skill of expertise; track skill.title) {
+        <div class="tech-card group">
+          <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-bg transition-colors">
+            <mat-icon>{{ skill.icon }}</mat-icon>
+          </div>
+          <h3 class="text-xl font-bold mb-3">{{ skill.title }}</h3>
+          <p class="text-muted text-sm leading-relaxed">{{ skill.desc }}</p>
+        </div>
+      }
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="relative bg-white/5 py-24 overflow-hidden">
+    <!-- Parallax Background Elements -->
+    <div class="absolute inset-0 pointer-events-none overflow-hidden">
+      <div class="parallax-bg absolute top-[10%] left-[-10%] w-96 h-96 bg-purple-500/5 rounded-full blur-3xl" data-speed="0.2"></div>
+      <div class="parallax-bg absolute bottom-[10%] right-[-10%] w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl" data-speed="0.3"></div>
+    </div>
+
+    <!-- Liquid Background -->
+    <div class="liquid-container opacity-20">
+      <div class="liquid-blob w-[500px] h-[500px] top-[10%] left-[5%] bg-purple-600/40" style="animation-duration: 28s; animation-delay: -3s;"></div>
+      <div class="liquid-blob w-[400px] h-[400px] top-[60%] left-[65%] bg-emerald-500/40" style="animation-delay: -15s; animation-duration: 32s;"></div>
+      <div class="liquid-blob w-[350px] h-[350px] top-[40%] left-[40%] bg-accent/30" style="animation-delay: -8s; animation-duration: 22s;"></div>
+    </div>
+
+    <div class="section-container">
+      <div class="text-center mb-16">
+        <div class="mono-label mb-2">PORTFOLIO OF INNOVATION</div>
+        <h2 class="text-4xl font-bold">Major Projects</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        @for (project of projects; track project.id) {
+          <div 
+            (click)="selectProject(project)"
+            (keydown.enter)="selectProject(project)"
+            tabindex="0"
+            role="button"
+            class="tech-card cursor-pointer group focus:outline-none focus:border-accent"
+            [class.border-accent]="selectedProject()?.id === project.id"
+          >
+            <div class="flex justify-between items-start mb-6">
+              <mat-icon class="text-accent">{{ project.icon }}</mat-icon>
+              <div class="text-[10px] font-mono text-muted">0{{ $index + 1 }}</div>
+            </div>
+            <h3 class="text-xl font-bold mb-3 group-hover:text-accent transition-colors">{{ project.title }}</h3>
+            <p class="text-muted text-sm mb-6">{{ project.shortDesc }}</p>
+            <div class="flex flex-wrap gap-2">
+              @for (t of project.tech; track t) {
+                <span class="text-[9px] font-mono px-2 py-1 bg-white/5 rounded text-muted">{{ t }}</span>
+              }
+            </div>
+          </div>
+        }
+      </div>
+
+      <!-- Technical Deep-Dive -->
+      @if (selectedProject(); as project) {
+        <div id="deep-dive" class="border border-accent/30 bg-bg p-8 md:p-12 rounded-2xl animate-in fade-in slide-in-from-bottom-4 duration-500">
+          <div class="flex flex-col lg:flex-row gap-12">
+            <div class="flex-1">
+              <div class="mono-label text-accent mb-4">TECHNICAL_DEEP_DIVE // {{ project.id }}</div>
+              <h3 class="text-3xl font-bold mb-8">{{ project.title }}</h3>
+              
+              <div class="space-y-8">
+                <div>
+                  <h4 class="font-mono text-xs text-accent uppercase tracking-widest mb-2">The Problem</h4>
+                  <p class="text-muted leading-relaxed">{{ project.deepDive.problem }}</p>
+                </div>
+                <div>
+                  <h4 class="font-mono text-xs text-accent uppercase tracking-widest mb-2">The Solution</h4>
+                  <p class="text-muted leading-relaxed">{{ project.deepDive.solution }}</p>
+                </div>
+                <div>
+                  <h4 class="font-mono text-xs text-accent uppercase tracking-widest mb-2">Key Learnings</h4>
+                  <p class="text-muted leading-relaxed">{{ project.deepDive.learnings }}</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="lg:w-1/3 space-y-6">
+              <div class="p-6 border border-border bg-white/5 rounded-xl">
+                <h4 class="font-mono text-[10px] text-muted uppercase mb-4">Architecture Overview</h4>
+                <div class="space-y-4">
+                  <div class="flex items-center gap-3">
+                    <div class="w-2 h-2 rounded-full bg-accent"></div>
+                    <span class="text-xs font-mono">Edge Computing Layer</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <div class="w-2 h-2 rounded-full bg-accent"></div>
+                    <span class="text-xs font-mono">Real-time Telemetry</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <div class="w-2 h-2 rounded-full bg-accent"></div>
+                    <span class="text-xs font-mono">Secure OTA Pipeline</span>
+                  </div>
+                </div>
+              </div>
+              <div class="aspect-square border border-border rounded-xl flex items-center justify-center bg-white/5 overflow-hidden relative">
+                <div class="absolute inset-0 opacity-10">
+                  <div class="w-full h-full" style="background-image: linear-gradient(var(--color-border) 1px, transparent 1px), linear-gradient(90deg, var(--color-border) 1px, transparent 1px); background-size: 20px 20px;"></div>
+                </div>
+                <mat-icon class="text-accent text-6xl opacity-50">{{ project.icon }}</mat-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </section>
+
+  <!-- Live Web Projects -->
+  <section id="live-projects" class="relative bg-white/5 py-24 overflow-hidden">
+    <!-- Parallax Background Elements -->
+    <div class="absolute inset-0 pointer-events-none overflow-hidden">
+      <div class="parallax-bg absolute top-[10%] left-[-10%] w-96 h-96 bg-accent/5 rounded-full blur-3xl" data-speed="0.2"></div>
+      <div class="parallax-bg absolute bottom-[10%] right-[-10%] w-96 h-96 bg-blue-500/5 rounded-full blur-3xl" data-speed="0.3"></div>
+    </div>
+
+    <div class="section-container">
+      <div class="text-center mb-16">
+        <div class="mono-label mb-2">LIVE DEMOS // WEB ECOSYSTEM</div>
+        <h2 class="text-4xl font-bold">Live Web Projects</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        @for (project of liveProjects; track project.url) {
+          <div class="tech-card group flex flex-col overflow-hidden p-0">
+            <div class="relative aspect-video overflow-hidden bg-bg/50">
+              <img 
+                [src]="project.thumbnail" 
+                [alt]="project.title" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                referrerpolicy="no-referrer"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-bg via-transparent to-transparent opacity-80"></div>
+              <div class="absolute bottom-6 left-6">
+                <div class="flex gap-2 mb-2">
+                  @for (t of project.tech; track t) {
+                    <span class="text-[9px] font-mono px-2 py-1 bg-accent/20 text-accent rounded backdrop-blur-sm">{{ t }}</span>
+                  }
+                </div>
+                <h3 class="text-2xl font-bold text-white group-hover:text-accent transition-colors">{{ project.title }}</h3>
+              </div>
+            </div>
+
+            <div class="p-8 flex-1 flex flex-col justify-between">
+              <p class="text-muted text-sm leading-relaxed mb-6">{{ project.desc }}</p>
+              
+              <a 
+                [href]="project.url" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="flex items-center justify-center gap-2 px-6 py-3 bg-accent text-bg font-mono text-xs uppercase tracking-widest font-bold hover:bg-white transition-all"
+              >
+                Launch Project <mat-icon class="text-sm">launch</mat-icon>
+              </a>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Timeline -->
+  <section id="timeline" class="relative py-24 section-container overflow-hidden">
+    <!-- Parallax Background Elements -->
+    <div class="absolute inset-0 pointer-events-none overflow-hidden">
+      <div class="parallax-bg absolute top-[20%] left-[-10%] w-96 h-96 bg-orange-500/5 rounded-full blur-3xl" data-speed="0.1"></div>
+      <div class="parallax-bg absolute bottom-[20%] right-[-10%] w-96 h-96 bg-accent/5 rounded-full blur-3xl" data-speed="0.2"></div>
+    </div>
+
+    <!-- Liquid Background -->
+    <div class="liquid-container opacity-20">
+      <div class="liquid-blob w-[600px] h-[600px] top-[-10%] left-[50%] bg-orange-500/30" style="animation-duration: 45s; animation-delay: -5s;"></div>
+      <div class="liquid-blob w-[300px] h-[300px] top-[80%] left-[10%] bg-accent/30" style="animation-delay: -20s; animation-duration: 28s;"></div>
+    </div>
+
+    <div class="text-center mb-16">
+      <div class="mono-label mb-2">CAREER TRAJECTORY</div>
+      <h2 class="text-4xl font-bold">Interactive Timeline</h2>
+    </div>
+
+    <div class="relative max-w-4xl mx-auto">
+      <!-- Vertical Line -->
+      <div class="absolute left-0 md:left-1/2 top-0 bottom-0 w-[1px] bg-border -translate-x-1/2"></div>
+
+      <div class="space-y-12">
+        @for (item of timeline; track item.title) {
+          <div class="relative flex flex-col md:flex-row gap-8 items-start md:items-center">
+            <!-- Node -->
+            <div 
+              (click)="toggleTimeline(item.title)"
+              (keydown.enter)="toggleTimeline(item.title)"
+              tabindex="0"
+              role="button"
+              class="absolute left-0 md:left-1/2 w-4 h-4 rounded-full border-2 border-accent bg-bg -translate-x-1/2 z-10 cursor-pointer hover:scale-125 transition-transform focus:outline-none focus:ring-2 focus:ring-accent"
+              [class.bg-accent]="expandedTimelineItem() === item.title"
+              [attr.aria-expanded]="expandedTimelineItem() === item.title"
+            ></div>
+
+            <!-- Content -->
+            <div 
+              class="w-full md:w-1/2 pl-8 md:pl-0 md:pr-12 md:text-right"
+              [class.md:ml-auto]=" $index % 2 !== 0 "
+              [class.md:pl-12]="$index % 2 !== 0"
+              [class.md:pr-0]="$index % 2 !== 0"
+              [class.md:text-left]="$index % 2 !== 0"
+            >
+              <div 
+                (click)="toggleTimeline(item.title)"
+                (keydown.enter)="toggleTimeline(item.title)"
+                tabindex="0"
+                role="button"
+                class="tech-card cursor-pointer hover:border-accent/30 transition-all focus:outline-none focus:border-accent"
+              >
+                <div class="flex items-center gap-3 mb-2" [class.md:justify-end]="$index % 2 === 0" [class.md:flex-row-reverse]="$index % 2 !== 0">
+                  <span class="font-mono text-accent text-xs">{{ item.year }}</span>
+                  <div class="w-2 h-2 rounded-full" [class.bg-accent]="item.type === 'career'" [class.bg-blue-400]="item.type === 'leadership'" [class.bg-purple-400]="item.type === 'certification'"></div>
+                </div>
+                <h3 class="text-lg font-bold mb-1">{{ item.title }}</h3>
+                <p class="text-muted text-sm">{{ item.desc }}</p>
+                
+                @if (expandedTimelineItem() === item.title) {
+                  <div class="mt-4 pt-4 border-t border-border animate-in fade-in slide-in-from-top-2 duration-300">
+                    <p class="text-xs text-muted leading-relaxed italic">{{ item.details }}</p>
+                  </div>
+                }
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications & Honors -->
+  <section class="relative bg-white/5 py-16 overflow-hidden">
+    <!-- Parallax Background Elements -->
+    <div class="absolute inset-0 pointer-events-none overflow-hidden">
+      <div class="parallax-bg absolute top-[10%] left-[-10%] w-80 h-80 bg-accent/5 rounded-full blur-3xl" data-speed="0.2"></div>
+      <div class="parallax-bg absolute bottom-[10%] right-[-10%] w-80 h-80 bg-blue-500/5 rounded-full blur-3xl" data-speed="0.3"></div>
+    </div>
+
+    <div class="section-container">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <!-- Certifications -->
+        <div>
+          <div class="flex items-center gap-4 mb-8">
+            <h2 class="text-3xl font-bold">Certifications</h2>
+            <div class="h-[1px] flex-1 bg-border"></div>
+          </div>
+          <div class="space-y-8">
+            @for (cert of certifications; track cert.title) {
+              <div class="relative pl-8 border-l border-border hover:border-accent transition-colors">
+                <div class="absolute -left-[5px] top-0 w-2 h-2 bg-accent rounded-full"></div>
+                <div class="mono-label text-accent mb-1">{{ cert.type }}</div>
+                <h3 class="text-lg font-bold mb-2">{{ cert.title }}</h3>
+                <p class="text-muted text-sm">{{ cert.desc }}</p>
+              </div>
+            }
+          </div>
+        </div>
+
+        <!-- Honors -->
+        <div>
+          <div class="flex items-center gap-4 mb-8">
+            <h2 class="text-3xl font-bold">Honors</h2>
+            <div class="h-[1px] flex-1 bg-border"></div>
+          </div>
+          <div class="space-y-8">
+            @for (honor of honors; track honor.title) {
+              <div class="relative pl-8 border-l border-border hover:border-accent transition-colors">
+                <div class="absolute -left-[5px] top-0 w-2 h-2 bg-accent rounded-full"></div>
+                <div class="mono-label text-accent mb-1">{{ honor.type }}</div>
+                <h3 class="text-lg font-bold mb-2">{{ honor.title }}</h3>
+                <p class="text-muted text-sm">{{ honor.desc }}</p>
+              </div>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech Stack -->
+  <section id="stack" class="relative section-container overflow-hidden py-16">
+    <!-- Parallax Background Elements -->
+    <div class="absolute inset-0 pointer-events-none overflow-hidden">
+      <div class="parallax-bg absolute top-[20%] right-[-10%] w-64 h-64 bg-accent/5 rounded-full blur-3xl" data-speed="0.15"></div>
+      <div class="parallax-bg absolute bottom-[20%] left-[-10%] w-64 h-64 bg-purple-500/5 rounded-full blur-3xl" data-speed="0.25"></div>
+    </div>
+
+    <div class="text-center mb-12">
+      <div class="mono-label mb-2">TECHNOLOGY ECOSYSTEM</div>
+      <h2 class="text-4xl font-bold">Tech Stack</h2>
+    </div>
+
+    <div class="flex flex-wrap justify-center gap-4">
+      @for (tech of techStack; track tech.name) {
+        <div class="group relative flex flex-col items-center gap-3 p-6 border border-border rounded-2xl bg-white/5 hover:border-accent hover:bg-accent/5 transition-all duration-300 w-32">
+          <img [src]="tech.icon" [alt]="tech.name" class="w-12 h-12 grayscale group-hover:grayscale-0 group-hover:scale-110 group-hover:drop-shadow-[0_0_10px_rgba(0,255,65,0.4)] transition-all duration-300" referrerpolicy="no-referrer">
+          <span class="font-mono text-[10px] uppercase tracking-widest text-muted group-hover:text-accent transition-colors">
+            {{ tech.name }}
+          </span>
+        </div>
+      }
+    </div>
+  </section>
+
+  <!-- Professional Certifications -->
+  <section id="certificates" class="relative bg-white/5 py-16 overflow-hidden">
+    <!-- Parallax Background Elements -->
+    <div class="absolute inset-0 pointer-events-none overflow-hidden">
+      <div class="parallax-bg absolute top-[10%] left-[-5%] w-72 h-72 bg-accent/5 rounded-full blur-3xl" data-speed="0.2"></div>
+      <div class="parallax-bg absolute bottom-[10%] right-[-5%] w-80 h-80 bg-blue-500/5 rounded-full blur-3xl" data-speed="0.3"></div>
+    </div>
+
+    <div class="section-container">
+      <div class="text-center mb-12">
+        <div class="mono-label mb-2">VERIFIED CREDENTIALS</div>
+        <h2 class="text-4xl font-bold">Professional Certifications</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        @for (cert of professionalCertificates; track cert.link) {
+          <div class="tech-card group flex flex-col justify-between overflow-hidden p-0">
+            <div class="relative h-48 overflow-hidden bg-bg/50">
+              @if (cert.isImage) {
+                <img 
+                  [src]="cert.link" 
+                  [alt]="cert.title" 
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  referrerpolicy="no-referrer"
+                />
+              } @else {
+                <div class="w-full h-full flex flex-col items-center justify-center bg-accent/5 p-6 text-center">
+                  <mat-icon class="text-accent text-5xl mb-2">workspace_premium</mat-icon>
+                  <div class="font-mono text-[10px] text-muted uppercase tracking-tighter">VERIFIED_CREDENTIAL</div>
+                </div>
+              }
+              <div class="absolute inset-0 bg-gradient-to-t from-bg to-transparent opacity-60"></div>
+              <div class="absolute bottom-4 left-4">
+                <span class="mono-label bg-bg/80 px-2 py-1 rounded backdrop-blur-sm">{{ cert.issuer }}</span>
+              </div>
+            </div>
+
+            <div class="p-6 pt-4 flex-1 flex flex-col justify-between">
+              <h3 class="text-lg font-bold mb-4 group-hover:text-accent transition-colors line-clamp-2">{{ cert.title }}</h3>
+              
+              <a 
+                [href]="cert.link" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="flex items-center justify-center gap-2 px-4 py-2 border border-border rounded-lg font-mono text-[10px] uppercase tracking-widest hover:bg-accent hover:text-bg hover:border-accent transition-all"
+              >
+                View Certificate <mat-icon class="text-sm">open_in_new</mat-icon>
+              </a>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer" class="border-t border-border py-12">
+    <div class="section-container flex flex-col md:flex-row justify-between items-center gap-8">
+      <div class="text-center md:text-left">
+        <div class="font-mono font-bold text-xl mb-2">VIJAY PRASAD</div>
+        <p class="text-muted text-sm">CTO @ Hariyalikart | Cybersecurity | Robotics</p>
+      </div>
+      <div class="flex gap-6 items-center">
+        <a href="mailto:vk16122001@gmail.com" class="text-muted hover:text-accent transition-colors" title="Email">
+          <mat-icon>mail</mat-icon>
+        </a>
+        <a href="https://github.com/nxtboi" target="_blank" class="text-muted hover:text-accent transition-colors" title="GitHub">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="w-5 h-5 grayscale hover:grayscale-0 transition-all invert opacity-70 hover:opacity-100" alt="GitHub">
+        </a>
+        <a href="https://www.linkedin.com/in/nxtboi/" target="_blank" class="text-muted hover:text-accent transition-colors" title="LinkedIn">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" class="w-5 h-5 grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100" alt="LinkedIn">
+        </a>
+      </div>
+      <div class="text-[10px] font-mono text-muted uppercase tracking-widest">
+        &copy; 2026 ALL RIGHTS RESERVED
+      </div>
+    </div>
+  </footer>
+
+  <!-- SVG Filter for Liquid Motion -->
+  <svg style="display: none;">
+    <defs>
+      <filter id="liquid-goo">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="20" result="blur" />
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 40 -15" result="goo" />
+        <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+      </filter>
+    </defs>
+  </svg>
+</main>

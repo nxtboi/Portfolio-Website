@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Material+Icons&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-bg: #0a0a0a;
+  --color-ink: #ffffff;
+  --color-accent: #00ff41; /* Matrix/Terminal Green */
+  --color-muted: #888888;
+  --color-border: rgba(255, 255, 255, 0.1);
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-ink font-sans selection:bg-accent selection:text-bg;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-mono tracking-tight;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-bg;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted/20 rounded-full hover:bg-accent/50 transition-colors;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-7xl mx-auto px-6 py-24;
+  }
+
+  .tech-card {
+    @apply border border-border bg-white/5 p-6 rounded-xl hover:border-accent hover:scale-[1.05] hover:shadow-[0_0_30px_rgba(0,255,65,0.2)] transition-all duration-300;
+  }
+
+  .mono-label {
+    @apply font-mono text-[10px] uppercase tracking-widest text-muted;
+  }
+
+  .glitch-text {
+    position: relative;
+    display: inline-block;
+  }
+
+  .glitch-text::before,
+  .glitch-text::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-bg);
+  }
+
+  .glitch-text::before {
+    left: 2px;
+    text-shadow: -2px 0 #ff00c1;
+    clip: rect(44px, 450px, 56px, 0);
+    animation: glitch-anim 5s infinite linear alternate-reverse;
+  }
+
+  .glitch-text::after {
+    left: -2px;
+    text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
+    animation: glitch-anim2 1s infinite linear alternate-reverse;
+  }
+
+  @keyframes glitch-anim {
+    0% { clip: rect(31px, 9999px, 94px, 0); }
+    20% { clip: rect(62px, 9999px, 42px, 0); }
+    40% { clip: rect(16px, 9999px, 78px, 0); }
+    60% { clip: rect(43px, 9999px, 11px, 0); }
+    80% { clip: rect(85px, 9999px, 63px, 0); }
+    100% { clip: rect(24px, 9999px, 98px, 0); }
+  }
+
+  @keyframes glitch-anim2 {
+    0% { clip: rect(65px, 9999px, 100px, 0); }
+    20% { clip: rect(32px, 9999px, 5px, 0); }
+    40% { clip: rect(9px, 9999px, 87px, 0); }
+    60% { clip: rect(54px, 9999px, 21px, 0); }
+    80% { clip: rect(76px, 9999px, 43px, 0); }
+    100% { clip: rect(12px, 9999px, 76px, 0); }
+  }
+
+  .liquid-container {
+    filter: url("#liquid-goo");
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: -1;
+    opacity: 0.4;
+  }
+
+  .liquid-blob {
+    position: absolute;
+    background: var(--color-accent);
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    filter: blur(40px);
+    animation: liquid-move 20s infinite linear;
+    will-change: transform, border-radius;
+  }
+
+  @keyframes liquid-move {
+    0% { 
+      transform: translate(0, 0) scale(1) rotate(0deg); 
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; 
+    }
+    25% { 
+      transform: translate(15%, 10%) scale(1.1) rotate(90deg); 
+      border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; 
+    }
+    50% { 
+      transform: translate(-5%, 20%) scale(0.9) rotate(180deg); 
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; 
+    }
+    75% { 
+      transform: translate(10%, -5%) scale(1.2) rotate(270deg); 
+      border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; 
+    }
+    100% { 
+      transform: translate(0, 0) scale(1) rotate(360deg); 
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; 
+    }
+  }
+}
