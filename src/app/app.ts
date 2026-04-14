@@ -241,6 +241,8 @@ export class App {
     { title: 'Udemy Certificate 11', issuer: 'Udemy', link: 'https://udemy-certificate.s3.amazonaws.com/image/UC-33cf396a-146c-487e-b5a1-1e98d85d6c32.jpg', isImage: true },
     { title: 'GUVI Certification', issuer: 'GUVI', link: 'https://www.guvi.in/share-certificate/0161C761584e0cujF3', isImage: false },
     { title: 'InfoSec Awareness', issuer: 'ISEA', link: 'https://infosecawareness.in/validate-certificate?certid=MeitY/ISEA/WCHP/029371', isImage: false },
+    { title: 'HCL GUVI Certification', issuer: 'HCL & GUVI', link: 'https://ibb.co/WNFhLN3q', isImage: false },
+    { title: 'Certificate QR 2025', issuer: 'Certification', link: 'https://ibb.co/gMg7nmZd', isImage: false },
   ];
 
   toggleTimeline(title: string) {
