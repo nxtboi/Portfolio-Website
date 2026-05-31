@@ -179,6 +179,13 @@ export class App {
 
   liveProjects = [
     {
+      title: 'Campus Lens',
+      url: 'https://campus-lens-v2.vercel.app/',
+      thumbnail: 'https://image.thum.io/get/width/800/crop/600/https://campus-lens-v2.vercel.app/',
+      desc: 'An advanced web platform designed to streamline campus navigation, student hubs, and real-time community engagement.',
+      tech: ['Next.js', 'Tailwind CSS', 'React']
+    },
+    {
       title: 'StyleSync',
       url: 'https://style-sync-self.vercel.app/',
       thumbnail: 'https://image.thum.io/get/width/800/crop/600/https://style-sync-self.vercel.app/',
