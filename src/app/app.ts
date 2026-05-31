@@ -42,10 +42,11 @@ export class App {
 
   constructor() {
     afterNextRender(async () => {
-      const { animate, scroll, stagger } = await import('motion');
+      const { animate, scroll, stagger, inView } = await import('motion');
       this.initHeroAnimations(animate, stagger);
       this.initScrollytelling(scroll, animate);
       this.initParallax(scroll);
+      this.initTechStackAnimations(inView, animate, stagger);
 
       // Initialize theme from client local storage or system preference
       if (isPlatformBrowser(this.platformId)) {
@@ -346,5 +347,21 @@ export class App {
         }
       );
     });
+  }
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  private initTechStackAnimations(inView: any, animate: any, stagger: any) {
+    if (isPlatformBrowser(this.platformId)) {
+      const container = document.getElementById('techStackContainer');
+      if (container) {
+        inView(container, () => {
+          animate(
+            '.tech-stack-card',
+            { opacity: [0, 1], y: [20, 0], scale: [0.95, 1] },
+            { delay: stagger(0.04), duration: 0.6, ease: 'easeOut' }
+          );
+        });
+      }
+    }
   }
 }
