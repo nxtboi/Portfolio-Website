@@ -6,12 +6,24 @@
         <div class="w-8 h-8 bg-accent rounded-sm flex items-center justify-center font-mono font-bold text-bg">VP</div>
         <span class="font-mono text-xs tracking-tighter hidden sm:block">VIJAY_PRASAD // CTO_HARIYALIKART</span>
       </div>
-      <div class="flex gap-6 text-[10px] font-mono uppercase tracking-widest">
-        <a href="#vision" class="hover:text-accent transition-colors">Vision</a>
-        <a href="#expertise" class="hover:text-accent transition-colors">Expertise</a>
-        <a href="#projects" class="hover:text-accent transition-colors">Projects</a>
-        <a href="#timeline" class="hover:text-accent transition-colors">Timeline</a>
-        <a href="#stack" class="hover:text-accent transition-colors">Stack</a>
+      <div class="flex items-center gap-4 sm:gap-6">
+        <div class="flex gap-3 sm:gap-6 text-[10px] font-mono uppercase tracking-widest">
+          <a href="#vision" class="hover:text-accent transition-colors">Vision</a>
+          <a href="#expertise" class="hover:text-accent transition-colors">Expertise</a>
+          <a href="#projects" class="hover:text-accent transition-colors">Projects</a>
+          <a href="#timeline" class="hover:text-accent transition-colors">Timeline</a>
+          <a href="#stack" class="hover:text-accent transition-colors">Stack</a>
+        </div>
+        
+        <!-- High-Contrast Theme Toggle Button -->
+        <button 
+          (click)="toggleTheme()" 
+          class="flex items-center justify-center w-8 h-8 rounded-lg border border-border hover:border-accent hover:text-accent text-ink focus:outline-none focus:ring-1 focus:ring-accent cursor-pointer"
+          [attr.aria-label]="theme() === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'"
+          id="themeToggleBtn"
+        >
+          <mat-icon class="text-[16px] h-4 w-4 select-none">{{ theme() === 'dark' ? 'light_mode' : 'dark_mode' }}</mat-icon>
+        </button>
       </div>
     </div>
   </nav>
@@ -295,7 +307,7 @@
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 referrerpolicy="no-referrer"
               />
-              <div class="absolute inset-0 bg-gradient-to-t from-bg via-transparent to-transparent opacity-80"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent opacity-85"></div>
               <div class="absolute bottom-6 left-6">
                 <div class="flex gap-2 mb-2">
                   @for (t of project.tech; track t) {

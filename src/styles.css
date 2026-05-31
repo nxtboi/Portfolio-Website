@@ -1,21 +1,56 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Material+Icons&display=swap');
 @import "tailwindcss";
 
+:root {
+  --color-bg-val: #0a0a0a;
+  --color-ink-val: #ffffff;
+  --color-accent-val: #00ff41; /* Neo Green */
+  --color-muted-val: #888888;
+  --color-border-val: rgba(255, 255, 255, 0.1);
+  --surface-color: rgba(255, 255, 255, 0.03);
+  --surface-hover: rgba(255, 255, 255, 0.08);
+  --hover-shadow: 0 0 30px rgba(0, 255, 65, 0.25);
+  --liquid-opacity: 0.15;
+}
+
+.light {
+  --color-bg-val: #f4f4f5; /* Zinc-100 base background for clean structure */
+  --color-ink-val: #111111; /* Charcoal-900 for excellent contrast and readability */
+  --color-accent-val: #007a23; /* Dark green for accessible contrast on light background */
+  --color-muted-val: #4b5563; /* Gray-600 for >= 4.5:1 text readability */
+  --color-border-val: rgba(0, 0, 0, 0.15); /* Sleek black-tint borders */
+  --surface-color: #ffffff; /* White cards on light-gray background */
+  --surface-hover: rgba(0, 0, 0, 0.04);
+  --hover-shadow: 0 12px 30px rgba(0, 0, 0, 0.08); /* Clean modern soft shadow */
+  --liquid-opacity: 0.04; /* Highly subtle decorative background blur elements */
+}
+
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
   
-  --color-bg: #0a0a0a;
-  --color-ink: #ffffff;
-  --color-accent: #00ff41; /* Matrix/Terminal Green */
-  --color-muted: #888888;
-  --color-border: rgba(255, 255, 255, 0.1);
+  --color-bg: var(--color-bg-val);
+  --color-ink: var(--color-ink-val);
+  --color-accent: var(--color-accent-val);
+  --color-muted: var(--color-muted-val);
+  --color-border: var(--color-border-val);
 }
 
 @layer base {
   body {
     @apply bg-bg text-ink font-sans selection:bg-accent selection:text-bg;
     overflow-x: hidden;
+  }
+
+  body, main, nav, section, footer, h1, h2, h3, h4, p, span, a, button {
+    transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1), 
+                border-color 300ms cubic-bezier(0.4, 0, 0.2, 1), 
+                color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Exclude continuous interactive/animating items from transitions to preserve scroll speed */
+  .parallax-bg, .liquid-blob, .progress-line {
+    transition: none !important;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -34,13 +69,38 @@
   }
 }
 
+/* Base Light mode adaptive classes to clean layout overlay conflicts */
+.light .bg-white\/5 {
+  background-color: var(--surface-color) !important;
+}
+.light .bg-white\/10 {
+  background-color: var(--surface-hover) !important;
+}
+.light .hover\:bg-white\/5:hover {
+  background-color: var(--surface-hover) !important;
+}
+.light .hover\:bg-white\/10:hover {
+  background-color: var(--surface-hover) !important;
+}
+.light .bg-bg\/50 {
+  background-color: var(--surface-color) !important;
+}
+.light .bg-bg\/80 {
+  background-color: rgba(244, 244, 245, 0.8) !important;
+}
+
 @layer components {
   .section-container {
     @apply max-w-7xl mx-auto px-6 py-24;
   }
 
   .tech-card {
-    @apply border border-border bg-white/5 p-6 rounded-xl hover:border-accent hover:scale-[1.05] hover:shadow-[0_0_30px_rgba(0,255,65,0.2)] transition-all duration-300;
+    @apply border border-border p-6 rounded-xl hover:scale-[1.05] transition-all duration-300;
+    background-color: var(--surface-color);
+  }
+  .tech-card:hover {
+    border-color: var(--accent-color);
+    box-shadow: var(--hover-shadow);
   }
 
   .mono-label {
@@ -100,7 +160,7 @@
     inset: 0;
     overflow: hidden;
     z-index: -1;
-    opacity: 0.4;
+    opacity: var(--liquid-opacity);
   }
 
   .liquid-blob {
@@ -135,3 +195,4 @@
     }
   }
 }
+

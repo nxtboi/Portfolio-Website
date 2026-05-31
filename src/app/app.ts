@@ -38,6 +38,7 @@ export class App {
   activeYear = signal(2024);
   selectedProject = signal<Project | null>(null);
   expandedTimelineItem = signal<string | null>(null);
+  theme = signal<'dark' | 'light'>('dark');
 
   constructor() {
     afterNextRender(async () => {
@@ -45,7 +46,37 @@ export class App {
       this.initHeroAnimations(animate, stagger);
       this.initScrollytelling(scroll, animate);
       this.initParallax(scroll);
+
+      // Initialize theme from client local storage or system preference
+      if (isPlatformBrowser(this.platformId)) {
+        const savedTheme = localStorage.getItem('portfolio-theme') as 'dark' | 'light';
+        if (savedTheme === 'light' || savedTheme === 'dark') {
+          this.setTheme(savedTheme);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+          this.setTheme('light');
+        } else {
+          this.setTheme('dark');
+        }
+      }
     });
+  }
+
+  setTheme(theme: 'dark' | 'light') {
+    this.theme.set(theme);
+    if (isPlatformBrowser(this.platformId)) {
+      const root = document.documentElement;
+      if (theme === 'light') {
+        root.classList.add('light');
+        localStorage.setItem('portfolio-theme', 'light');
+      } else {
+        root.classList.remove('light');
+        localStorage.setItem('portfolio-theme', 'dark');
+      }
+    }
+  }
+
+  toggleTheme() {
+    this.setTheme(this.theme() === 'dark' ? 'light' : 'dark');
   }
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
