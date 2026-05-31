@@ -1,5 +1,6 @@
 {
   "name": "Vijay Prasad Portfolio",
   "description": "Portfolio of Vijay Prasad, CTO at Hariyalikart, Cybersecurity Innovator, and Robotics Enthusiast.",
-  "requestFramePermissions": []
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
