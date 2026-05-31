@@ -179,6 +179,13 @@ export class App {
 
   liveProjects = [
     {
+      title: 'Ignizia Tech',
+      url: 'https://www.ignizia.in',
+      thumbnail: 'https://image.thum.io/get/width/800/crop/600/https://www.ignizia.in',
+      desc: 'An innovative tech development and solutions platform offering robust digital experiences and custom web engineering.',
+      tech: ['Web Development', 'UI/UX Design', 'Cloud Solutions']
+    },
+    {
       title: 'Campus Lens',
       url: 'https://campus-lens-v2.vercel.app/',
       thumbnail: 'https://image.thum.io/get/width/800/crop/600/https://campus-lens-v2.vercel.app/',
