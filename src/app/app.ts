@@ -255,7 +255,7 @@ export class App {
     { title: 'Udemy Certificate 11', issuer: 'Udemy', link: 'https://udemy-certificate.s3.amazonaws.com/image/UC-33cf396a-146c-487e-b5a1-1e98d85d6c32.jpg', isImage: true },
     { title: 'C Programming', issuer: 'GUVI HCL', link: 'https://i.ibb.co/TMnHQr8V/c-programming.png', isImage: false },
     { title: 'OOPS Using C++', issuer: 'GUVI HCL', link: 'https://i.ibb.co/Kc7PJcGR/HCL-GUVI-Certification-77-P52-IVw816410j6g-L.png', isImage: true },
-    { title: 'International Physics Quiz', issuer: 'IPhyC' 'Certification', link: 'https://i.ibb.co/jv45pbkz/Certificate-QR-2025-1017-C8388279-d0126d7432265e9cad69bb2a8b5513c0-page-0001.jpg', isImage: true },
+    { title: 'International Physics Quiz', issuer: 'IPhyC Certification', link: 'https://i.ibb.co/jv45pbkz/Certificate-QR-2025-1017-C8388279-d0126d7432265e9cad69bb2a8b5513c0-page-0001.jpg', isImage: true },
     { title: 'InfoSec Awareness', issuer: 'ISEA', link: 'https://infosecawareness.in/validate-certificate?certid=MeitY/ISEA/WCHP/029371', isImage: false },
   ];
 
