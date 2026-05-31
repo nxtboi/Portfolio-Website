@@ -47,6 +47,8 @@ export class App {
       this.initScrollytelling(scroll, animate);
       this.initParallax(scroll);
       this.initTechStackAnimations(inView, animate, stagger);
+      this.initProjectAnimations(inView, animate, stagger);
+      this.initCertificationAnimations(inView, animate, stagger);
 
       // Initialize theme from client local storage or system preference
       if (isPlatformBrowser(this.platformId)) {
@@ -161,21 +163,28 @@ export class App {
       type: 'career'
     },
     {
-      year: '2023',
+      year: '2026',
       title: 'CA @ Technex IIT BHU',
       desc: 'Campus Ambassador for the annual technical festival.',
       details: 'Led technical communities, managed large-scale outreach, and acted as a bridge between top-tier technical institutions.',
       type: 'leadership'
     },
     {
-      year: '2022',
+      year: '2026',
+      title: 'CA @ Techfest IIT Bombay',
+      desc: 'Campus Ambassador for the premier science and technology festival.',
+      details: 'Supported coordination, regional marketing, and technical outreach campaigns for Asia\'s largest science and technology festival.',
+      type: 'leadership'
+    },
+    {
+      year: '2025',
       title: 'CA @ E-cell IIT BHU',
       desc: 'Promoting entrepreneurship and innovation within the student ecosystem.',
       details: 'Organized workshops, startup competitions, and networking events for aspiring student entrepreneurs.',
       type: 'leadership'
     },
     {
-      year: '2021',
+      year: '2025',
       title: 'CA @ Techkriti IITK',
       desc: 'Representing Asia\'s largest technical and entrepreneurial festival.',
       details: 'Coordinated regional events and outreach programs to foster deep-tech leadership among students.',
@@ -183,9 +192,9 @@ export class App {
     },
     {
       year: 'Cert',
-      title: 'Autodesk Certified Professional',
-      desc: 'Fusion 360 & AutoCAD certification.',
-      details: 'Validation of advanced proficiency in 2D drafting and 3D modeling for complex mechanical systems.',
+      title: 'SolidWorks Certified Professional',
+      desc: 'SolidWorks mechanical design certification.',
+      details: 'Validation of advanced proficiency in 3D CAD modeling, design validation, and complex parametric systems.',
       type: 'certification'
     },
     {
@@ -198,7 +207,7 @@ export class App {
   ];
 
   certifications = [
-    { title: 'Autodesk Certified Professional', desc: 'Fusion 360 & AutoCAD. Advanced proficiency in 2D drafting and 3D modeling.', type: 'Engineering' },
+    { title: 'SolidWorks Certified Professional', desc: 'SolidWorks design. Advanced proficiency in complex CAD, structural validation, and parametric modeling.', type: 'Engineering' },
     { title: 'Expert in Reverse Engineering', desc: 'Geomagic Design X & Artec Workflows. Physical prototyping to digital optimization.', type: 'Specialized' },
     { title: 'SolidWorks Certified Professional', desc: 'Mechanical design and manufacturing knowledge.', type: 'Engineering' },
   ];
@@ -359,6 +368,64 @@ export class App {
             '.tech-stack-card',
             { opacity: [0, 1], y: [20, 0], scale: [0.95, 1] },
             { delay: stagger(0.04), duration: 0.6, ease: 'easeOut' }
+          );
+        });
+      }
+    }
+  }
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  private initProjectAnimations(inView: any, animate: any, stagger: any) {
+    if (isPlatformBrowser(this.platformId)) {
+      // 1. Major Projects
+      const majorContainer = document.getElementById('majorProjectsContainer');
+      if (majorContainer) {
+        inView(majorContainer, () => {
+          animate(
+            '.major-project-card',
+            { opacity: [0, 1], y: [20, 0] },
+            { delay: stagger(0.08), duration: 0.6, ease: 'easeOut' }
+          );
+        });
+      }
+
+      // 2. Live Web Projects
+      const liveContainer = document.getElementById('liveProjectsContainer');
+      if (liveContainer) {
+        inView(liveContainer, () => {
+          animate(
+            '.live-project-card',
+            { opacity: [0, 1], y: [20, 0] },
+            { delay: stagger(0.08), duration: 0.6, ease: 'easeOut' }
+          );
+        });
+      }
+    }
+  }
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  private initCertificationAnimations(inView: any, animate: any, stagger: any) {
+    if (isPlatformBrowser(this.platformId)) {
+      // 1. Core Certifications & Honors
+      const certHonorsContainer = document.getElementById('certificationsHonorsContainer');
+      if (certHonorsContainer) {
+        inView(certHonorsContainer, () => {
+          animate(
+            '.cert-honor-card',
+            { opacity: [0, 1], x: [-15, 0] },
+            { delay: stagger(0.06), duration: 0.5, ease: 'easeOut' }
+          );
+        });
+      }
+
+      // 2. Verified Professional Certifications (Grid)
+      const profCertContainer = document.getElementById('profCertificationsContainer');
+      if (profCertContainer) {
+        inView(profCertContainer, () => {
+          animate(
+            '.prof-cert-card',
+            { opacity: [0, 1], y: [20, 0], scale: [0.98, 1] },
+            { delay: stagger(0.05), duration: 0.6, ease: 'easeOut' }
           );
         });
       }
