@@ -238,7 +238,8 @@ export class App {
     { name: 'Salesforce', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/salesforce/salesforce-original.svg' },
     { name: 'Google Cloud', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg' },
     { name: 'Google Skills', icon: 'https://www.gstatic.com/images/branding/product/1x/googleg_48dp.png' },
-    { name: 'Vertex AI', icon: 'https://i.ibb.co/svvVTBZw/3e5b376c-fab7-4fe1-a522-018a7fa22ea8.png' }
+    { name: 'Vertex AI', icon: 'https://i.ibb.co/svvVTBZw/3e5b376c-fab7-4fe1-a522-018a7fa22ea8.png' },
+    { name: 'Vercel', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg' }
   ];
 
   professionalCertificates = [
@@ -253,7 +254,7 @@ export class App {
     { title: 'Udemy Certificate 9', issuer: 'Udemy', link: 'https://udemy-certificate.s3.amazonaws.com/image/UC-5eb0d16e-7991-43a9-9ea1-6f2d1350de69.jpg', isImage: true },
     { title: 'Udemy Certificate 10', issuer: 'Udemy', link: 'https://udemy-certificate.s3.amazonaws.com/image/UC-f0eb7d1e-f56e-4be6-a9b3-5e2f9fb27da9.jpg', isImage: true },
     { title: 'Udemy Certificate 11', issuer: 'Udemy', link: 'https://udemy-certificate.s3.amazonaws.com/image/UC-33cf396a-146c-487e-b5a1-1e98d85d6c32.jpg', isImage: true },
-    { title: 'C Programming', issuer: 'GUVI HCL', link: 'https://i.ibb.co/TMnHQr8V/c-programming.png', isImage: false },
+    { title: 'C Programming', issuer: 'GUVI HCL', link: 'https://i.ibb.co/TMnHQr8V/c-programming.png', isImage: true },
     { title: 'OOPS Using C++', issuer: 'GUVI HCL', link: 'https://i.ibb.co/Kc7PJcGR/HCL-GUVI-Certification-77-P52-IVw816410j6g-L.png', isImage: true },
     { title: 'International Physics Quiz', issuer: 'IPhyC Certification', link: 'https://i.ibb.co/jv45pbkz/Certificate-QR-2025-1017-C8388279-d0126d7432265e9cad69bb2a8b5513c0-page-0001.jpg', isImage: true },
     { title: 'InfoSec Awareness', issuer: 'ISEA', link: 'https://infosecawareness.in/validate-certificate?certid=MeitY/ISEA/WCHP/029371', isImage: false },
